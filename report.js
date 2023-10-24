@@ -46,7 +46,6 @@ if (isClosestFridayHoliday) {
   console.log('• Last working day in this week:', LastWorkingFriday);
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Find the closest Last Day of Month
 const closestLastDayOfMonth = findClosestLastDayOfMonth(currentDate);
 function findClosestLastDayOfMonth(date) {
@@ -87,12 +86,15 @@ if (isClosestLastDayOfMonthHolidayOrWeekend) {
   console.log('• Last working day in this month:', LastWorkingMonthDay);
 }
 
-// Check if the current date matches "LastWorkingFriday" or "LastWorkingMonthDay"
-if (
-  formattedCurrentDate === LastWorkingFriday ||
-  formattedCurrentDate === LastWorkingMonthDay
-) {
-  console.log("=> !Do something on", formattedCurrentDate);
-} else {
-  console.log("=> Nothing to do on", formattedCurrentDate);
-}
+  // Check if the current date matches "LastWorkingFriday" or "LastWorkingMonthDay"
+  let triggerEvent;
+  if (
+    formattedCurrentDate === LastWorkingFriday ||
+    formattedCurrentDate === LastWorkingMonthDay
+  ) {
+      triggerEvent = true
+      console.log("=> !Do something on", formattedCurrentDate);
+  } else {
+      triggerEvent = false
+      console.log("=> Nothing to do on", formattedCurrentDate);
+  }
