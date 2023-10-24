@@ -1,0 +1,29 @@
+{
+  "name": "timesheet",
+  "version": "1.0.0",
+  "description": "The script checks for the last working day every Friday and also the last working day of the month.",
+  "main": "report.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rybonka/timesheet.git"
+  },
+  "keywords": [
+    "working",
+    "day",
+    "Friday",
+    "timesheet",
+    "report"
+  ],
+  "author": "Oleksandr Rybonka",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rybonka/timesheet/issues"
+  },
+  "homepage": "https://github.com/rybonka/timesheet#readme",
+  "dependencies": {
+    "date-holidays": "^3.23.0"
+  }
+}
