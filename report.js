@@ -47,11 +47,12 @@ if (isClosestFridayHoliday) {
 }
 
 // Find the closest Last Day of Month
-const closestLastDayOfMonth = findClosestLastDayOfMonth(currentDate);
+const todayDate = new Date();
+const closestLastDayOfMonth = findClosestLastDayOfMonth(todayDate);
 function findClosestLastDayOfMonth(date) {
-  // Find the closest Last Day of Month
-  date.setMonth(date.getMonth() + 1); // Move to the next month
-  date.setDate(0); // Set the day to the last day of the previous month (Last Day of Month)
+  date.setDate(1);                        // Set the day to the first day of the current month
+  date.setMonth(date.getMonth() + 1);     // Move to the next month
+  date.setDate(0);                        // Set the day to the last day of the previous month (Last Day of Month)
   return date;
 }
   console.log('Closest Last Day of Month:', closestLastDayOfMonth.toDateString());
